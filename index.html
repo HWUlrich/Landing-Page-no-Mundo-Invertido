@@ -59,7 +59,7 @@
                 ></iframe>
             </div>
             <div class="section-texts">
-                <h1>Stranger Things Vol. 4</h1>
+                <h2>Stranger Things Vol. 4</h2>
                 <p role="text">
                     Mais experientes, os heróis de Stranger Things também precisam
                     enfrentar desafios maiores do que nunca e tomar decisões que irão
@@ -98,27 +98,27 @@
             </p>
 
             <div class="form-content">
-                <h3>Entre para o clube de D&D e tenha experiências de <spam>outro mundo</spam></h3>
-            </div>
-
-            <div class="form-container">
+                <h3>Entre para o clube de D&D e tenha experiências de <span>outro mundo</span></h3>
+           
+                <div class="form-container">
+        
+                    <form>
+                        <label for="txtName">Nome Completo</label>
+                        <input type="text" name="name" id="txtName">
                 
-                <form >
-                    <label for="txtName">Nome Completo</label>
-                    <input type="text" name="name" id="txtName">
-
-                    <label for="txtEmail">E-mail</label>
-                    <input type="email" name="email" id="txtEmail">
-
-                    <label for="txtLevel">Level</label>
-                    <input type="text" name="level" id="txtLevel">
-
-                    <label for="txtCharacter">Personagem</label>
-                    <textarea name="character" id="txtCharacter" cols="30" rows="10"></textarea>
-
-                    <button type="button" id="btnSubscribe">Me Inscrever</button>
-                </form>
-            </div>
+                        <label for="txtEmail">E-mail</label>
+                        <input type="email" name="email" id="txtEmail">
+                
+                        <label for="txtLevel">Level</label>
+                        <input type="text" name="level" id="txtLevel">
+                
+                        <label for="txtCharacter">Personagem</label>
+                        <textarea name="character" id="txtCharacter" cols="30" rows="10"></textarea>
+                
+                        <button type="button" id="btnSubscribe">Me Inscrever</button>
+                    </form>
+                </div>
+            <div/>
         </section>
     </main>
     <footer>
@@ -147,7 +147,6 @@
             audio.src = `assets/musics/${music}`;
             audio.play();
             audio.volume = 0.2;
-
         }
     </script>
 </body>
