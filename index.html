@@ -110,7 +110,7 @@
                         <input type="email" name="email" id="txtEmail">
                 
                         <label for="txtLevel">Level</label>
-                        <input type="text" name="level" id="txtLevel">
+                        <input type="number" name="level" id="txtLevel">
                 
                         <label for="txtCharacter">Personagem</label>
                         <textarea name="character" id="txtCharacter" cols="30" rows="10"></textarea>
@@ -118,7 +118,7 @@
                         <button type="button" id="btnSubscribe">Me Inscrever</button>
                     </form>
                 </div>
-            <div/>
+            </div>
         </section>
     </main>
     <footer>
@@ -141,7 +141,7 @@
             document.body.classList.toggle('light-theme');
 
             const theme = document.body.classList[0];
-            const music = theme === 'light-theme' ? 'normal-world.mpeg' : 'inverted-word.mpeg'
+            const music = theme === 'light-theme' ? 'normal-world.mpeg' : 'inverted-word.mpeg';
 
             const audio = document.getElementById('music');
             audio.src = `assets/musics/${music}`;
