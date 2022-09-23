@@ -1,5 +1,4 @@
-import app from "./firebase/app.js";
-import { subscribeToHellfireClub } from "./firebase/hellfire-club.js";
+import { subscribeToHellfireClub } from "./firebase/hellfire-clube.js";
 
 const txtName = document.getElementById('txtName');
 const txtEmail = document.getElementById('txtEmail');
@@ -8,7 +7,7 @@ const txtCharacter = document.getElementById('txtCharacter');
 
 const btnSubscrib = document.getElementById('btnSubscrib');
 
-btnSubscrib.addEventListener('click', () => {
+btnSubscrib.addEventListener('click', async () => {
     const subscription = {
         name: txtName.value,
         email: txtEmail.value,
@@ -16,6 +15,13 @@ btnSubscrib.addEventListener('click', () => {
         Character: txtCharacter.value
     }
 
-    subscribeToHellfireClub(subscription);
+    const subscriptionId = await subscribeToHellfireClub(subscription);
+
+    txtName.value = '';
+    txtEmail.value = '';
+    txtLevel.value = '';
+    txtCharacter.value = '';
+
+    alert(`Inscrito com sucesso: ${subscriptionId}`);
 })
 
